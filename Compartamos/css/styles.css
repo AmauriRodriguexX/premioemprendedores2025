@@ -21,16 +21,24 @@
     src: url('../fonts/Inter-Italic.ttf') format('truetype');
     font-style: italic;
 }
+
 @font-face {
     font-family: 'Bree';
     src: url('../fonts/BreeRegular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Bree';
+    src: url('../fonts/BreeBold.woff2') format('woff2');
+    font-weight: 700;
 }
 
 @font-face {
     font-family: 'Amor';
-    src: url('../fonts/AmorSansPro-Bold.woff2') format('woff2');
+    src: url('../fonts/AmorSansPro.woff2') format('woff2');
+    font-weight: 400;
 }
-
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
@@ -58,21 +66,21 @@
 body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     overflow-x: hidden !important;
 }
 
 
-
 h1, h2, h3{
-    font-family: 'Amor', serif;
-    color: #652D86;
+    font-family: 'Bree', serif; /* Set Bree font for the body */
+    color: #CE0058;
 }
 
 h2{
     font-size: 48px;
 }
 h4{
-    font-family: 'Amor', serif;
+    font-family: 'Bree', serif; /* Set Amor font for the body */
     font-size: 2.5rem;
 }
 
@@ -112,7 +120,7 @@ p{
 }
 
 #offcanvasNavbar{
-    background-color: #652D86;
+    background-color: #CE0058;
     height: 100vh;
 }
 .offcanvas-header .btn-close{
@@ -126,12 +134,12 @@ p{
     padding: 20px 30px;
 }
 .offcanvas-body .navbar-nav .active{
-    color: #652D86;
+    color: #CE0058;
     position: relative;
 }
 .offcanvas-body .navbar-nav .active:after{
     content: "\2022";
-    color: #652D86;
+    color: #CE0058;
     float: right;
     font-weight: 800;
     font-size: 21px;
@@ -165,7 +173,6 @@ p{
     background-color: rgba(255, 255, 255, 0.64);
 }
 
-
 #lottie-animation {
     width: 100%;
     height: 100vh;
@@ -193,11 +200,11 @@ p{
     margin: 150px 0 0;
 }
 .title-head{
-    font-family: 'Amor', serif;
+    font-family: 'Bree', serif;
     font-size: 96px;
     line-height: 90px;
-    color: #652D86 !important;
-    margin-bottom: 2rem;
+    color: #CE0058!important;
+    margin-bottom: 32px;
 }
 .title-desc{
     font-family: 'Inter', serif !important;
@@ -222,10 +229,18 @@ p{
     z-index: 10;
 }
 .center-play{
-    width: 47.75rem;
+    width: 764px;
     height: 63px;
     position: relative;
     cursor: pointer;
+}
+.section-title{
+    font-size: 3.25rem;
+    color: #CE0058;
+    margin-bottom: 1.5rem;
+}
+.section-text{
+    font-size: 1.5rem;
 }
 .center-play:hover .button-play{
     opacity: 1;
@@ -247,15 +262,7 @@ p{
     z-index: 9;
 }
 
-.section-title{
-    color: #652D86 !important;
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-.section-text{
-    font-size: 1.5rem;
-}
+
 .button-play-2 {
     opacity: 1 !important;
 }
@@ -272,7 +279,7 @@ p{
     top:0;
     transform: translateX(-50%);
     font-size: 42px;
-    font-family: 'Amor', serif;
+    font-family: 'Bree', serif;
     text-decoration: underline;
     transition: 0.3s all;
     color: #ffffff;
@@ -282,10 +289,10 @@ p{
     overflow: hidden;
 }
 .winners .card{
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color:rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px);
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 0;
 }
 .winners .card img{
@@ -301,8 +308,8 @@ p{
 }
 
 .video{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     position: relative;
     display: block;
     border-radius: 20px;
@@ -313,7 +320,7 @@ p{
     z-index: 2;
     min-width: 100%;
     min-height: 100%;
-    border-radius: 20px;
+    border-radius: 1rem;
     object-fit: cover; /* Importante para que no deforme la proporción */
 }
 
@@ -390,7 +397,7 @@ p{
 
 .slick-slide .card{
     background-color: #ffffffa1;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     color: #ffffff;
     border-radius: 20px;
 }
@@ -428,7 +435,7 @@ p{
 
 
 .burdeos-content{
-    background-color:rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(4px);
     padding-bottom: 60px;
     position: relative;
@@ -483,21 +490,21 @@ footer .row{
     text-decoration: none;
 }
 .links{
-    color: #652D86;
+    color: #CE0058;
     font-size: 16px;
 }
 .link-sep{
-    color: #652D86;
+    color: #CE0058;
     font-size: 16px;
     margin: 0 5px;
 }
 .fases-title{
-    padding: 80px 0;
+    padding: 80px 30px;
 }
 
 .fases-title h1{
     font-size: 46px;
-    color: #652D86;
+    color: #CE0058;
     margin-bottom: 30px;
 }
 
@@ -513,7 +520,7 @@ footer .row{
     position: relative;
 }
 .fases-card .card-title{
-    color: #652D86;
+    color: #CE0058;
     font-weight: bolder;
 }
 .col-fases .fases-card:before{
@@ -539,7 +546,7 @@ footer .row{
     transition: 0.5s all;
 }
 .col-fases .fases-card.active::before{
-    color: #652D86;
+    color: #CE0058;
     z-index: 3;
 }
 .col-fases:not(:last-child) .fases-card.add-width::after {
@@ -550,8 +557,8 @@ footer .row{
 }
 
 .fases-card.active{
-    border: 2px solid #652D86;
-    background-color: #652D86;
+    border: 2px solid #CE0058;
+    background-color: #CE0058;
     color: #ffffff;
 }
 
@@ -576,7 +583,7 @@ footer .row{
 .fases-card.active .number{
     font-size: 1.2rem;
     font-weight: bold;
-    color: #652D86;
+    color: #CE0058;
 }
 
 .fases-card .card-title{
@@ -608,8 +615,8 @@ footer .row{
 .stick-bottom{
     position: fixed;
     top: calc(100% - 80px);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.52);
     width: 100%;
     height: 80px;
     display: flex;
@@ -624,21 +631,21 @@ footer .row{
     padding: 10px 30px;
     font-weight: normal;
     border-radius: 50px;
-    background-color: #652D86;
-    border: 1px solid #652D86;
+    background-color: #CE0058;
+    border: 1px solid #CE0058;
     color: #fff;
     transition: 0.5s all;
     font-size: 16px;
 }
 .btn-continue:hover{
-    background-color: #652D86;
-    border: 1px solid #652D86;
+    background-color: #CE0058;
+    border: 1px solid #CE0058;
     color: #fff;
 }
 
 .form-check-input:checked{
-    background-color: #652D86 !important;
-    border-color: #652D86 !important;
+    background-color: #CE0058 !important;
+    border-color: #CE0058 !important;
 }
 
 .text-descubre{
@@ -649,8 +656,8 @@ footer .row{
 }
 
 .text-modal-content h1{
-    font-family: 'Amor', serif;
-    color: #652D86;
+    font-family: 'Bree', serif;
+    color: #CE0058;
     padding-bottom: 20px;
 }
 
@@ -659,23 +666,9 @@ footer .row{
     padding: 20px 0 ;
 }
 
-@media (max-width: 575.98px) {
-    .text-modal-content .form-check {
-        text-align: left;
-    }
-    .section-title{
-        font-size: 2.75rem;
-    }
-    .section-text{
-        font-size: 1.25rem;
-    }
-    .fases-title{
-        padding: 40px 0;
-    }
-}
 .text-modal-content .form-check .form-check-input{
     float: none;
-    border: 1px solid #652D86;
+    border: 1px solid #CE0058;
 }
 .text-modal-content .bt-politica{
     margin-top: 20px;
@@ -690,15 +683,15 @@ footer .row{
     padding: 14px 30px;
     font-weight: bold;
     border-radius: 50px;
-    background-color: #652D86;
-    border: 1px solid #652D86;
+    background-color: #CE0058;
+    border: 1px solid #CE0058;
     color: #fff;
     transition: 0.5s all;
     font-size: 16px;
 }
 .btn-continue:hover, .btn-submit:hover, .bt-politica:hover{
-    background-color: #53256E;
-    border: 1px solid #53256E;
+    background-color: #960048;
+    border: 1px solid #960048;
     color: #fff;
 }
 .btn-disabled{
@@ -709,15 +702,20 @@ footer .row{
     width: 320px;
 }
 
-
-
 @media (max-width: 575.98px) {
+    .text-modal-content .form-check {
+        text-align: left;
+    }
     .btn-disabled, .btn-continue,.btn-submit,.bt-politica {
         width:95%;
     }
+    .section-title{
+        font-size: 2.75rem;
+    }
+    .section-text{
+        font-size: 1.25rem;
+    }
 }
-
-
 
 @media (max-width: 760px) {
     h2{
@@ -774,6 +772,9 @@ footer .row{
     }
     .inspira-text br{
         display: none;
+    }
+    .fases-title{
+        padding: 40px 0;
     }
     .image-fase-one,.image-fase-two, .image-fase-three,.image-fase-four{
         width: 80%;
@@ -846,7 +847,7 @@ footer .row{
 
     .title-premio{
         font-size: 28px;
-        font-family: 'Amor', serif;
+        font-family: 'Bree', serif;
     }
     .title-head{
         font-size: 48px;
@@ -931,8 +932,8 @@ label {
 
 
 .aviso-privacidad-text {
-    color: #652D86;
-    font-family: 'Amor', serif;
+    color: #CE0058;
+    font-family: 'Bree', serif;
     font-size: 28px !important;
     font-style: normal;
     text-align: left;
@@ -963,7 +964,7 @@ label {
 }
 
 .link-privacidad {
-    color: #652D86;
+    color: #CE0058;
     font-weight: 600;
 }
 

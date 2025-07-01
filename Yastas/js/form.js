@@ -89,10 +89,10 @@ function validarCampo(campo) {
     switch (campo) {
         case 'idCliente':
             // Validar ID (exactamente 12 dígitos)
-            const regexId = /^\d{3,12}$/;
+            const regexId = /^\d{2,5}$/;
             esValido = regexId.test(elemento.value.trim());
             if (!esValido) {
-                mostrarError(elemento, 'El ID debe ser entre 3 y 12 dígitos numéricos');
+                mostrarError(elemento, 'El ID debe ser entre 2 y 5 dígitos numéricos');
             } else {
                 limpiarError(elemento);
             }

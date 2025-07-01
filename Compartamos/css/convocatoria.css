@@ -123,7 +123,7 @@ body{
     padding: 15px;
 }
 .flip-card-front .rotate-num{
-    color: #652D86;
+    color: #CE0058;
     text-align: left;
     font-weight: bolder;
 }
@@ -207,15 +207,15 @@ body{
 
 
 .flip-card-back {
-    background: #652D86;
+    background: #c5005a;
     color: #fff;
     transform: rotateY(180deg);
 }
 .flip-card-back.yellow{
-    background: #EE7B0F;
+    background: #FFA300;
 }
 .flip-card-back.brown{
-    background: #93C01F;
+    background: #847770;
 }
 .facil-content{
     text-align: center;

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'event': 'pec_2025_videos',
                 'CDCategory': 'Historia',
                 'CDAction': '01. Inicio',
-                'CDValue': 'https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4',
+                'CDValue': 'https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4',
                 'CDFunnel': 'PE - Convocatoria - 2025'
             });
         });
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'CDFunnel': 'PE - Convocatoria - 2025'
                 });
                 setTimeout(function(){
-                window.location.href="https://www.compartamos.com.mx/Emprendedores/paso1/"
+                    window.location.href="/paso1/"
                 }, 500)
             });
         });
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('step1Form')) {
         // Campos del Step 1
         const step1Fields = [
-            { id: 'idCliente', name: 'IDCliente', desc: '01. ID Cliente ' },
+            { id: 'idCliente', name: 'IDCliente', desc: '01. ID Comercio ' },
             { id: 'nombre', name: 'nombre', desc: '02. Nombre' },
             { id: 'apellido', name: 'apellido', desc: '03. Apellido' },
             { id: 'celular', name: 'celular', desc: '04. Teléfono'  },
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('step1Form').addEventListener('submit', function(e) {
             e.preventDefault(); // Prevenir envío normal para tracking
             const element = document.getElementById('idCliente');
-            trackFormAction(element.value || '', '02. Datos de cliente');
+            trackFormAction(element.value || '', '02. Datos del comicionista');
             localStorage.setItem('idcliente', element.value);
             setTimeout(function(){
                 window.location.href="../paso2/"
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
             trackFormAction(localStorage.getItem('idcliente') || '', '04. Multimedia');
             setTimeout(function(){
                 //window.location.href="../gracias/"
-                
+
             }, 500)
             grecaptcha.execute();
         });

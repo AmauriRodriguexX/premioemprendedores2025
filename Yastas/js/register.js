@@ -1,4 +1,4 @@
-var endPointSendData = "https://www.compartamos.com.mx/pec-web/web/v1/solicitud/submit";
+var endPointSendData = "https://www.prospeccion.compartamos.com.mx:8583/pec-web/web/v1/solicitud/submit";
 var submitThreeCounterRegister = 0;
 var MSG_ERROR_GRAL="Error al ingresar la solicitud, favor de intentar mas tarde";
 
@@ -13,8 +13,7 @@ const registration_fields = document.querySelectorAll('#step1 input,#step1 selec
 $(document).ready(function() {
 
 	$('#msError').css({'color':'red','text-align':'center'});
-    $("#msError").hide();
-
+	$("#msError").hide();
 });
 
 let videoValido = false;
@@ -97,6 +96,7 @@ function registrarCandidato(token){
 				localStorage.setItem('submitted-form',true);
                 cleanForm();
 				if(data.codigo == 0){
+					
 					dataLayer.push({
    						'event': 'registro_emprendedores_2025',
    						'CDAction': '05. Registro Completado',
@@ -105,12 +105,12 @@ function registrarCandidato(token){
 						});
 				}
                 if (typeof(Storage) !== 'undefined') {
-					setTimeout(function(){
-						sessionStorage.setItem('FolioPEC', data.solicitud.folio);
-						sessionStorage.setItem('FechaPEC', data.solicitud.fecAlta);
-						sessionStorage.setItem('msPEC', data.codigo);
-						location.href = '../gracias/'
-            		}, 500)
+						setTimeout(function(){
+							sessionStorage.setItem('FolioPEC', data.solicitud.folio);
+							sessionStorage.setItem('FechaPEC', data.solicitud.fecAlta);
+							sessionStorage.setItem('msPEC', data.codigo);
+							location.href = '../gracias/'
+            			}, 500)
 						
 					} else {
 						setTimeout(function(){
@@ -181,12 +181,12 @@ function registrarCandidato(token){
 
 function armarFormulario(token){
 	var formData = new FormData();
-
+	
 	formData.append('aviso', 'si');
-
+	
 	formData.append('giroNegocio', localStorage.getItem("giro"));
 	formData.append('justificacion', localStorage.getItem("justificacion"));
-		 
+	
 	addFileField(formData, 'doc1', $('#videoInput')[0].files[0]);
 	addFileField(formData, 'doc2', $('#fotoInput')[0].files[0]);
 
@@ -203,7 +203,7 @@ function armarFormulario(token){
 	formData.append('nombre', localStorage.getItem('nombre'));
 	formData.append('apellidos', localStorage.getItem('apellidos'));
 	formData.append('numTel', localStorage.getItem('numTel'));
-
+	
 	formData.append('estado', localStorage.getItem('estado'));
 	if (localStorage.getItem('municipio')== undefined){
 		addOptionalField(formData, 'municipio', 'NA');
@@ -214,8 +214,8 @@ function armarFormulario(token){
 	formData.append('promApellidos', localStorage.getItem('promApellidos'));
 	formData.append('promNumTel', localStorage.getItem('promNumTel'));
 
-	
-	formData.append('tipo', "Colaborador");
+
+	formData.append('tipo', "Comisionista");
 	let cbSource = localStorage.getItem('cb_source');
 	let cbMedium = localStorage.getItem('cb_medium');
 	let cbCampaign = localStorage.getItem('cb_campaign');
@@ -232,7 +232,7 @@ function armarFormulario(token){
 		formData.append('content',localStorage.getItem("cb_content"));
 	}
 
-	let iscomisionista = '0';
+	let iscomisionista = '1';
 	formData.append('iscomisionista', iscomisionista);
 
 	formData.append('token', token);
