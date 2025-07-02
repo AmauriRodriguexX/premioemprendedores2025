@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Premio Emprendedores 2025 para clientes de Compartamos</title>
+     <meta name="description"
+          content="El Premio Emprendedores 2025 reconoce historias inspiradoras de valientes clientes apoyados por Compartamos para lograr que sus emprendimientos sean exitosos.">
+     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+     <link href="../css/premio.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="../js/slick/slick.css" />
+     <link rel="stylesheet" type="text/css" href="../js/slick/slick-theme.css" />
+     <link href="../css/styles.css" rel="stylesheet">
+     <link href="../css/convocatoria.css" rel="stylesheet">
+     <link href="../css/votaciones.css" rel="stylesheet">
+     <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+
+     <script src="../js/dataLayer.js?v=0.0.0.1"></script>
+     <script src="../js/lottie/lottie-play.js"></script>
+
+     <!-- Google Tag Manager -->
+     <script>(function (w, d, s, l, i) {
+               w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                         new Date().getTime(), event: 'gtm.js'
+               }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-PXVLSK6');</script>
+     <!-- End Google Tag Manager -->
+</head>
+
+<body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript><iframe src="ns" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+     <!-- End Google Tag Manager (noscript) -->
+     <div class="container-fluid" style="overflow: hidden; padding: 0; margin: 0;">
+          <header class="navbar bd-navbar fixed-top">
+
+               <nav class="container custom-container bd-gutter">
+                    <a class="navbar-brand" href="https://www.compartamos.com.mx/compartamos" target="_blank"
+                         rel="noopener noreferrer">
+                         <img src="../images/logo-blanco.png" alt="Logo de Compartamos Banco color blanco." width="110"
+                              height="44" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvas" aria-label="Toggle navigation">
+                         <img src="../images/icon-main.png" alt="Icono de menu color gris." width="32">
+                    </button>
+                    <!-- Removed "show" class so menu isn't displayed by default -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                         aria-labelledby="offcanvasNavbarLabel">
+                         <div class="offcanvas-header d-flex justify-content-between">
+                              <img src="../images/logo-blanco.png" alt="Logo de Compartamos Banco color blanco."
+                                   height="40" class="d-inline-block align-text-top">
+                              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="offcanvas"
+                                   aria-label="Close">
+                                   <img src="../images/icon-close.png" alt="Icono de cerrar color gris."
+                                        style="width: 32px; height: 32px;">
+                              </button>
+                         </div>
+                         <div class="offcanvas-body">
+                              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                   <li class="nav-item">
+                                        <a class="nav-link " href="../">INICIO</a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link " aria-current="page"
+                                             href="../convocatoria/index.html">CONVOCATORIA</a>
+                                   </li>
+                                   <li class="nav-item active">
+                                        <a class="nav-link active" href="../votaciones/">VOTACIONES</a>
+                                   </li>
+
+                              </ul>
+                         </div>
+                    </div>
+               </nav>
+          </header>
+
+          <div class="row">
+               <div class="col-12 prev-header-auto ">
+                    <div class="back-convo-votaciones"></div>
+                    <div class="intro-convo">
+                         <div class="intro-inner">
+                              <h1 class="momento-title text-start mb-4 mt-2">Celebremos las historias de <br
+                                        class="d-none d-sm-block"> éxito que inspiran
+                              </h1>
+                              <span class="momento-text">Es momento de elegir los proyectos emprendedores que están <br
+                                        class="d-none d-sm-block"> transformando su realidad. <strong>¡Vota por tu
+                                        favorito!</strong></span>
+
+                              <div class="tabs-wrapper">
+                                   <div class="tabs-scroll">
+                                        <ul class="tabs">
+                                             <li><a class="active" href="#" data-region="centro">Centro</a></li>
+                                             <li><a href="#" data-region="centro-norte">Centro norte</a></li>
+                                             <li><a href="#" data-region="metro">Metro</a></li>
+                                             <li><a href="#" data-region="noreste">Noreste</a></li>
+                                             <li><a href="#" data-region="occidente">Occidente</a></li>
+                                             <li><a href="#" data-region="pacifico">Pacífico</a></li>
+                                             <li><a href="#" data-region="peninsula">Península</a></li>
+                                             <li><a href="#" data-region="sureste">Sureste</a></li>
+                                             <li><a href="#" data-region="sur">Sur</a></li>
+                                        </ul>
+                                   </div>
+                              </div>
+
+                              <div id="vote-closed-message" class="vote-alert-message">
+                                   <img src="../images/votaciones/info.png" alt="Advertencia" width="16" height="16">
+                                   <span>Este grupo ya cerró votaciones, ¡pero aún hay mucho éxito por descubrir!
+                                        Inspírate en otras regiones.</span>
+                              </div>
+
+                              <!-- Contenidos -->
+                              <div class="tabs-contents">
+                                   <div class="tab-content active" data-region="centro">
+                                        <div class="row gy-4 gx-md-4 mt-2">
+                                             <!-- CARD 1: Jose Robles -->
+                                             <div class="col-12 col-md-6">
+                                                  <div class="vote-card">
+                                                       <div class="vote-img-wrapper">
+                                                            <img src="../images/votaciones/participante-1.jpg"
+                                                                 alt="Jose Robles">
+                                                            <button class="next-btn" aria-label="Ver más">
+                                                                 <img src="../images/votaciones/arrow-profile.png"
+                                                                      alt="" class="img-next rotate-hover">
+                                                            </button>
+                                                       </div>
+                                                       <div class="vote-info">
+                                                            <div class="info-left">
+                                                                 <h3 class="vote-name">Jose Robles</h3>
+                                                                 <p class="vote-desc">Zapatería</p>
+                                                            </div>
+                                                            <!-- Voto María López -->
+                                                            <div
+                                                                 class="vote-btn-wrapper position-relative d-inline-block">
+                                                                 <button class="vote-btn"
+                                                                      data-candidato="Nombre del participante">
+                                                                      <img class="default vote-btn-next"
+                                                                           src="../images/votaciones/vote.png"
+                                                                           alt="Votar">
+                                                                      <img class="hover vote-btn-next"
+                                                                           src="../images/votaciones/vote-hover.png"
+                                                                           alt="Votar hover">
+                                                                 </button>
+
+                                                                 <!-- Lottie encima del botón -->
+                                                                 <div class="lottie-feedback-overlay d-none">
+                                                                      <lottie-player
+                                                                           src="../images/votaciones/confeti.json"
+                                                                           background="transparent" speed="1"
+                                                                           style="width: 80px; height: 80px;">
+                                                                      </lottie-player>
+                                                                 </div>
+                                                            </div>
+
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- CARD 2: María López -->
+                                             <div class="col-12 col-md-6">
+                                                  <div class="vote-card">
+                                                       <div class="vote-img-wrapper">
+                                                            <img src="../images/votaciones/participante-2.jpg"
+                                                                 alt="María López">
+                                                            <button class="next-btn" aria-label="Ver más">
+                                                                 <img src="../images/votaciones/arrow-profile.png"
+                                                                      alt="" class="img-next rotate-hover">
+                                                            </button>
+                                                       </div>
+                                                       <div class="vote-info">
+                                                            <div class="info-left">
+                                                                 <h3 class="vote-name">María López</h3>
+                                                                 <p class="vote-desc">Elaboración de mole</p>
+                                                            </div>
+                                                            <!-- Voto María López -->
+                                                            <div
+                                                                 class="vote-btn-wrapper position-relative d-inline-block">
+                                                                 <button class="vote-btn"
+                                                                      data-candidato="Nombre del participante">
+                                                                      <img class="default vote-btn-next"
+                                                                           src="../images/votaciones/vote.png"
+                                                                           alt="Votar">
+                                                                      <img class="hover vote-btn-next"
+                                                                           src="../images/votaciones/vote-hover.png"
+                                                                           alt="Votar hover">
+                                                                 </button>
+
+                                                                 <!-- Lottie encima del botón -->
+                                                                 <div class="lottie-feedback-overlay d-none">
+                                                                      <lottie-player
+                                                                           src="../images/votaciones/confeti.json"
+                                                                           background="transparent" speed="1"
+                                                                           style="width: 80px; height: 80px;">
+                                                                      </lottie-player>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="tab-content" data-region="centro-norte">
+                                        <div class="row gy-4 gx-md-4 mt-2">
+                                             <!-- CARD 1: Jose Robles -->
+                                             <div class="col-12 col-md-6">
+                                                  <div class="vote-card">
+                                                       <div class="vote-img-wrapper">
+                                                            <img src="../images/votaciones/participante-1.jpg"
+                                                                 alt="Jose Robles">
+                                                            <button class="next-btn" aria-label="Ver más">
+                                                                 <img src="../images/votaciones/arrow-profile.png"
+                                                                      alt="" class="img-next rotate-hover">
+                                                            </button>
+                                                       </div>
+                                                       <div class="vote-info">
+                                                            <div class="info-left">
+                                                                 <h3 class="vote-name">Roberto Lopez</h3>
+                                                                 <p class="vote-desc">Panaderia</p>
+                                                            </div>
+                                                            <!-- Voto María López -->
+                                                            <div
+                                                                 class="vote-btn-wrapper position-relative d-inline-block">
+                                                                 <button class="vote-btn"
+                                                                      data-candidato="Nombre del participante">
+                                                                      <img class="default vote-btn-next"
+                                                                           src="../images/votaciones/vote.png"
+                                                                           alt="Votar">
+                                                                      <img class="hover vote-btn-next"
+                                                                           src="../images/votaciones/vote-hover.png"
+                                                                           alt="Votar hover">
+                                                                 </button>
+
+                                                                 <!-- Lottie encima del botón -->
+                                                                 <div class="lottie-feedback-overlay d-none">
+                                                                      <lottie-player
+                                                                           src="../images/votaciones/confeti.json"
+                                                                           background="transparent" speed="1"
+                                                                           style="width: 80px; height: 80px;">
+                                                                      </lottie-player>
+                                                                 </div>
+                                                            </div>
+
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <!-- CARD 2: María López -->
+                                             <div class="col-12 col-md-6">
+                                                  <div class="vote-card">
+                                                       <div class="vote-img-wrapper">
+                                                            <img src="../images/votaciones/participante-2.jpg"
+                                                                 alt="María López">
+                                                            <button class="next-btn" aria-label="Ver más">
+                                                                 <img src="../images/votaciones/arrow-profile.png"
+                                                                      alt="" class="img-next rotate-hover">
+                                                            </button>
+                                                       </div>
+                                                       <div class="vote-info">
+                                                            <div class="info-left">
+                                                                 <h3 class="vote-name">Susana Lopez</h3>
+                                                                 <p class="vote-desc">Elaboración de mole</p>
+                                                            </div>
+                                                            <!-- Voto María López -->
+                                                            <div
+                                                                 class="vote-btn-wrapper position-relative d-inline-block">
+                                                                 <button class="vote-btn"
+                                                                      data-candidato="Nombre del participante">
+                                                                      <img class="default vote-btn-next"
+                                                                           src="../images/votaciones/vote.png"
+                                                                           alt="Votar">
+                                                                      <img class="hover vote-btn-next"
+                                                                           src="../images/votaciones/vote-hover.png"
+                                                                           alt="Votar hover">
+                                                                 </button>
+
+                                                                 <!-- Lottie encima del botón -->
+                                                                 <div class="lottie-feedback-overlay d-none">
+                                                                      <lottie-player
+                                                                           src="../images/votaciones/confeti.json"
+                                                                           background="transparent" speed="1"
+                                                                           style="width: 80px; height: 80px;">
+                                                                      </lottie-player>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="tab-content" data-region="metro">Contenido Metro</div>
+                                   <div class="tab-content" data-region="noreste">Contenido Noreste</div>
+                                   <div class="tab-content" data-region="occidente">Contenido Occidente</div>
+                                   <div class="tab-content" data-region="pacifico">Contenido Pacífico</div>
+                                   <div class="tab-content" data-region="peninsula">Contenido Península</div>
+                                   <div class="tab-content" data-region="sureste">Contenido Sureste</div>
+                                   <div class="tab-content" data-region="sur">Contenido Sur</div>
+                              </div>
+                         </div>
+
+
+
+                    </div>
+               </div>
+          </div>
+
+
+
+          <footer class="bd-footer">
+               <div class="container custom-container">
+                    <div class="row">
+                         <div class="col-md-6 col-sm-12 content-logo-pie">
+                              <div class="logo-pie">
+                                   <a href="https://www.compartamos.com.mx/compartamos" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <img src="../images/logo-color.png" alt="Logo de Compartamos Banco color."
+                                             width="110" height="44">
+                                   </a>
+                              </div>
+                              <div class="logo-data">
+                                   <img src="../images/data-empresa.png" alt="Logo de Gentera." width="220">
+                                   <span>© 2025 Gentera S.A.B</span>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-12 content-social-page">
+                              <a class="social-bt" href="https://www.facebook.com/CompartamosBanco" target="_blank"
+                                   rel="noopener noreferrer"><img src="../images/social/fb.png"
+                                        alt="Logotipo de red social Facebook color rosa." width="24"></a>
+                              <a class="social-bt" href="https://www.instagram.com/compartamosbancomx/" target="_blank"
+                                   rel="noopener noreferrer"><img src="../images/social/ig.png"
+                                        alt="Logotipo de red social Instagram color rosa." width="24"></a>
+                              <a class="social-bt" href="https://www.youtube.com/user/compartamosbanco" target="_blank"
+                                   rel="noopener noreferrer"><img src="../images/social/yt.png"
+                                        alt="Logotipo de red social Youtube color rosa." width="24"></a>
+                              <a class="social-bt" href="https://www.tiktok.com/@compartamosbancomx" target="_blank"
+                                   rel="noopener noreferrer"><img src="../images/social/tk.png"
+                                        alt="Logotipo de red social Tik Tok color rosa." width="24"></a>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-12">
+                              <div class="text-descubre">DESCUBRE</div>
+                              <div>
+                                   <a class="links" href="https://www.compartamos.com.mx/compartamos/credito"
+                                        target="_blank" rel="noopener noreferrer">Créditos</a>
+                                   <span class="link-sep">&#8226;</span>
+                                   <a class="links"
+                                        href="https://www.compartamos.com.mx/compartamos/ahorro/mis-ahorros-compartamos"
+                                        target="_blank " rel="noopener noreferrer">Tarjetas</a>
+                                   <span class="link-sep">&#8226;</span>
+                                   <a class="links"
+                                        href="https://www.compartamos.com.mx/compartamos/ahorro/inversiones-compartamos"
+                                        target="_blank" rel="noopener noreferrer">Inversiones</a>
+                                   <span class="link-sep">&#8226;</span>
+                                   <a class="links" href="https://www.compartamos.com.mx/compartamos/seguro"
+                                        target="_blank" rel="noopener noreferrer">Seguros</a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-12">
+                              <div class="text-banco">Banco Compartamos, SA, Institución de Banca Múltiple, Av.
+                                   Insurgentes
+                                   Sur 1458, Actipan, Benito Juárez, 03230 Ciudad de México, CDMX</div>
+                              <div>
+                                   <a class="links"
+                                        href="https://www.compartamos.com.mx/compartamos/regulacion/privacidad"
+                                        target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>
+                                   <span class="link-sep">&#8226;</span>
+                                   <a class="links"
+                                        href="https://www.compartamos.com.mx/compartamos/regulacion/terminos-y-condiciones"
+                                        target="_blank" rel="noopener noreferrer">Términos y Condiciones</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </footer>
+     </div>
+
+     <div class="modal fade" id="myPrivacidad" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <img src="../images/icon-overlay-close-magenta.png" alt="Icono de cerrar color rosa."
+                              id="btnCloseModal" type="button" data-bs-dismiss="modal" aria-label="Close" width="32">
+                    </div>
+                    <div class="modal-body">
+                         <div class="text-modal-content">
+                              <p class="aviso-privacidad-text ">Aviso de Privacidad</p>
+
+                              <p>Banco Compartamos, S.A., Institución de Banca Múltiple subsidiaria de GENTERA S.A.B. de
+                                   C.V,
+                                   con domicilio en Insurgentes Sur número 1458 piso 5, Colonia Actipan, Alcaldía Benito
+                                   Juárez, C.P. 03230, México, Ciudad de México, es el responsable del tratamiento y
+                                   protección
+                                   de sus datos personales recabados por este medio, categorizados como: i)
+                                   Identificación y
+                                   Contacto y ii) Patrimonio y los utilizará para las siguientes finalidades: i)
+                                   Identificarlo
+                                   y corroborar su identidad; ii) Integrar y actualizar su expediente; iii) Prestar,
+                                   administrar, operar y dar seguimiento a los servicios y productos que solicitó o
+                                   contrató
+                                   con nosotros; iv) Invitarlo a participar en nuestros eventos, campañas, concursos o
+                                   sorteos
+                                   y en caso de resultar ganador, contactarlo para la entrega del premio y v) Fines de
+                                   uso de
+                                   imagen en medios publicitarios videos/fotografía y publicaciones en cualquier otro
+                                   medio de
+                                   comunicación. Para limitar el uso o divulgación de sus datos personales puede
+                                   inscribirse en
+                                   nuestro listado de exclusión denominado "Exclusión de Promoción y Publicidad”, para
+                                   más
+                                   información y/o para ejercer sus Derechos ARCO usted podrá consultar el Aviso de
+                                   Privacidad
+                                   Integral para Clientes en el sitio web <a
+                                        href="https://www.compartamos.com.mx/compartamos" class="link-privacidad"
+                                        target="_blank" rel="noopener noreferrer">www.compartamos.com.mx</a> en la
+                                   sección Avisos Privacidad.
+                              </p>
+
+
+                              <div class="form-check">
+                                   <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                   <label class="form-check-label" for="checkDefault">
+                                        He leido y acepto el aviso de privacidad
+                                   </label><br><br>
+                                   <div class="d-flex justify-content-center">
+                                        <a href="../paso1/"
+                                             class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center">
+                                             Continuar
+                                             <span class="material-symbols-outlined"
+                                                  style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="modal fade" id="voteConfirmModal" tabindex="-1" aria-hidden="true">
+
+          <!-- Ícono de cerrar flotante, fuera del contenedor modal -->
+          <img src="../images/votaciones/icon-overlay-close-magenta.png" type="button" data-bs-dismiss="modal"
+               aria-label="Close" width="32" class="btn-close-floating" />
+
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content text-center p-0 pt-3">
+                    <div class="modal-body modal-stretch pb-4 px-4">
+                         <!-- Lottie animation -->
+                         <div style="width: 100px; margin: 0 auto;">
+                              <lottie-player src="../images/votaciones/vote-magenta.json" background="transparent"
+                                   speed="1" loop autoplay style="width: 100%; height: auto;">
+                              </lottie-player>
+                         </div>
+
+                         <h5 class="modal-text-gracias">¡Gracias por tu voto!</h5>
+                         <span class="modal-text-gracias-span mb-4">Tu voto por <strong>Jose Robles</strong> ha sido
+                              registrado correctamente.</span>
+
+                         <button type="button" class="btn btn-aceptar-outline" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>
+
+<!-- Botton like lottie confeti -->
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+       const voteMessage = document.getElementById("vote-closed-message");
+       if (voteMessage) voteMessage.style.display = "none";
+     
+       const voteButtons = document.querySelectorAll(".vote-btn");
+     
+       voteButtons.forEach(btn => {
+         btn.addEventListener("click", function (e) {
+           e.preventDefault();
+     
+           const wrapper = this.closest(".vote-btn-wrapper");
+           const lottieOverlay = wrapper.querySelector(".lottie-feedback-overlay");
+           const lottiePlayer = wrapper.querySelector("lottie-player");
+           const candidato = this.parentElement.parentElement.querySelector(".vote-name").textContent;
+     
+           // Mostrar animación Lottie
+           lottieOverlay.classList.remove("d-none");
+           lottiePlayer.stop && lottiePlayer.stop();
+           lottiePlayer.play && lottiePlayer.play();
+     
+           setTimeout(() => {
+             lottieOverlay.classList.add("d-none");
+     
+             const modal = new bootstrap.Modal(document.getElementById("voteConfirmModal"));
+             const nombreSpan = document.querySelector(".modal-text-gracias-span strong");
+             if (nombreSpan) nombreSpan.textContent = candidato;
+     
+             modal._votadoWrapper = wrapper;
+             modal._votedRegion = wrapper.closest(".tab-content")?.dataset.region;
+             modal.show();
+           }, 1000);
+         });
+       });
+     
+       const btnAceptar = document.querySelector('#voteConfirmModal .btn.btn-aceptar-outline');
+       if (btnAceptar) {
+         btnAceptar.addEventListener('click', function () {
+           const modal = bootstrap.Modal.getInstance(document.getElementById("voteConfirmModal"));
+           const wrapper = modal._votadoWrapper;
+           const region = modal._votedRegion;
+     
+           if (wrapper && region) {
+             const defaultImg = wrapper.querySelector("img.default");
+             if (defaultImg) {
+               defaultImg.src = "../images/votaciones/vote-check.png";
+               defaultImg.classList.add("vote-check");
+               defaultImg.addEventListener("animationend", () => {
+                 defaultImg.classList.remove("vote-check");
+               }, { once: true });
+             }
+     
+             const hoverImg = wrapper.querySelector("img.hover");
+             if (hoverImg) hoverImg.remove();
+     
+             const button = wrapper.querySelector(".vote-btn");
+             if (button) {
+               button.disabled = true;
+               button.style.cursor = "default";
+             }
+     
+             const currentTab = wrapper.closest(".tab-content");
+             if (currentTab) {
+               currentTab.querySelectorAll(".vote-btn-wrapper").forEach(w => {
+                 if (w !== wrapper) w.classList.add("hide");
+               });
+             }
+     
+             // Guardar en localStorage que esta región ya fue votada
+             localStorage.setItem(`votado-${region}`, "true");
+     
+             // Mostrar mensaje solo en la región actual
+             updateVoteMessage(region);
+           }
+         });
+       }
+     
+       // Mostrar/ocultar mensaje cuando cambias de tab
+       const tabLinks = document.querySelectorAll(".tabs a");
+       tabLinks.forEach(link => {
+         link.addEventListener("click", function (e) {
+           e.preventDefault();
+           const region = this.dataset.region;
+     
+           document.querySelectorAll(".tabs a").forEach(a => a.classList.remove("active"));
+           this.classList.add("active");
+     
+           document.querySelectorAll(".tab-content").forEach(tab => {
+             tab.classList.remove("active");
+           });
+           const targetTab = document.querySelector(`.tab-content[data-region="${region}"]`);
+           if (targetTab) targetTab.classList.add("active");
+     
+           updateVoteMessage(region);
+         });
+       });
+     
+       function updateVoteMessage(region) {
+         const voted = localStorage.getItem(`votado-${region}`) === "true";
+         if (voteMessage) voteMessage.style.display = voted ? "flex" : "none";
+       }
+     
+       // Mostrar mensaje según tab activa al cargar
+       const activeTab = document.querySelector(".tab-content.active")?.dataset.region;
+       if (activeTab) updateVoteMessage(activeTab);
+     });
+     </script>
+     
+     
+
+
+
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/premio.bundle.min.js"></script>
+
+<script src="../js/lottie/lottie.min.js"></script>
+<script src="../js/scrollreveal/scrollreveal.js"></script>
+<script type="text/javascript" src="../js/slick/slick.min.js"></script>
+
+<script src="../js/script.js"></script>
+<script src="../js/convo.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="../js/Utms.js"></script>
+<script src="../js/tabs.js"></script>
+
+</html>
