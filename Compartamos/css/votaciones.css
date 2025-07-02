@@ -75,6 +75,13 @@
   height: 60px;
 }
 
+/* En mobile: quitar el centrado */
+@media (max-width: 768px) {
+  .tabs-scroll {
+    justify-content: flex-start;
+  }
+}
+
 .tabs-scroll::-webkit-scrollbar {
   display: none;
 }
