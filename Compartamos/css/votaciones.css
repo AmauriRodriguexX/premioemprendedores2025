@@ -1,5 +1,5 @@
 .back-convo-votaciones {
-  background: url(../images/convocatoria-back.jpg);
+  background: url(../images/votaciones/master-background-banco.jpg  );
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14,6 +14,7 @@
 /* Mobile: forzar un alto mayor estimado para cubrir contenido */
 @media (max-width: 768px) {
   .back-convo-votaciones {
+    background: url(../images/votaciones/master-background-banco-mobile.jpg);
     min-height: 1600px; /* ← ajusta según el contenido que tengas */
   }
 }

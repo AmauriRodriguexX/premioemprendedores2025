@@ -84,12 +84,8 @@
                     <div class="back-convo-votaciones"></div>
                     <div class="intro-convo">
                          <div class="intro-inner">
-                              <h1 class="momento-title text-start mb-4 mt-2">Celebremos las historias de <br
-                                        class="d-none d-sm-block"> éxito que inspiran
-                              </h1>
-                              <span class="momento-text">Es momento de elegir los proyectos emprendedores que están <br
-                                        class="d-none d-sm-block"> transformando su realidad. <strong>¡Vota por tu
-                                        favorito!</strong></span>
+                              <h1 class="momento-title text-start mb-4 mt-2">Ha llegado la hora de votar por la <br
+                                        class="d-none d-sm-block">historia de éxito que más te inspire. </h1>
 
                               <div class="tabs-wrapper">
                                    <div class="tabs-scroll">
@@ -101,7 +97,6 @@
                                              <li><a href="#" data-region="occidente">Occidente</a></li>
                                              <li><a href="#" data-region="pacifico">Pacífico</a></li>
                                              <li><a href="#" data-region="peninsula">Península</a></li>
-                                             <li><a href="#" data-region="sureste">Sureste</a></li>
                                              <li><a href="#" data-region="sur">Sur</a></li>
                                         </ul>
                                    </div>
@@ -297,7 +292,6 @@
                                    <div class="tab-content" data-region="occidente">Contenido Occidente</div>
                                    <div class="tab-content" data-region="pacifico">Contenido Pacífico</div>
                                    <div class="tab-content" data-region="peninsula">Contenido Península</div>
-                                   <div class="tab-content" data-region="sureste">Contenido Sureste</div>
                                    <div class="tab-content" data-region="sur">Contenido Sur</div>
                               </div>
                          </div>
@@ -460,8 +454,9 @@
                          </div>
 
                          <h5 class="modal-text-gracias">¡Gracias por tu voto!</h5>
-                         <span class="modal-text-gracias-span mb-4">Tu voto por <strong>Jose Robles</strong> ha sido
-                              registrado correctamente.</span>
+                         <span class="modal-text-gracias-span">Tu voto por <strong>Jose Robles</strong> ha sido
+                              registrado correctamente. Te invitamos a votar por otras historias de éxito.</span>
+                         
 
                          <button type="button" class="btn btn-aceptar-outline" data-bs-dismiss="modal">Aceptar</button>
                     </div>
@@ -473,116 +468,111 @@
 <!-- Botton like lottie confeti -->
 <script>
      document.addEventListener("DOMContentLoaded", function () {
-       const voteMessage = document.getElementById("vote-closed-message");
-       if (voteMessage) voteMessage.style.display = "none";
-     
-       const voteButtons = document.querySelectorAll(".vote-btn");
-     
-       voteButtons.forEach(btn => {
-         btn.addEventListener("click", function (e) {
-           e.preventDefault();
-     
-           const wrapper = this.closest(".vote-btn-wrapper");
-           const lottieOverlay = wrapper.querySelector(".lottie-feedback-overlay");
-           const lottiePlayer = wrapper.querySelector("lottie-player");
-           const candidato = this.parentElement.parentElement.querySelector(".vote-name").textContent;
-     
-           // Mostrar animación Lottie
-           lottieOverlay.classList.remove("d-none");
-           lottiePlayer.stop && lottiePlayer.stop();
-           lottiePlayer.play && lottiePlayer.play();
-     
-           setTimeout(() => {
-             lottieOverlay.classList.add("d-none");
-     
-             const modal = new bootstrap.Modal(document.getElementById("voteConfirmModal"));
-             const nombreSpan = document.querySelector(".modal-text-gracias-span strong");
-             if (nombreSpan) nombreSpan.textContent = candidato;
-     
-             modal._votadoWrapper = wrapper;
-             modal._votedRegion = wrapper.closest(".tab-content")?.dataset.region;
-             modal.show();
-           }, 1000);
-         });
-       });
-     
-       const btnAceptar = document.querySelector('#voteConfirmModal .btn.btn-aceptar-outline');
-       if (btnAceptar) {
-         btnAceptar.addEventListener('click', function () {
-           const modal = bootstrap.Modal.getInstance(document.getElementById("voteConfirmModal"));
-           const wrapper = modal._votadoWrapper;
-           const region = modal._votedRegion;
-     
-           if (wrapper && region) {
-             const defaultImg = wrapper.querySelector("img.default");
-             if (defaultImg) {
-               defaultImg.src = "../images/votaciones/vote-check.png";
-               defaultImg.classList.add("vote-check");
-               defaultImg.addEventListener("animationend", () => {
-                 defaultImg.classList.remove("vote-check");
-               }, { once: true });
-             }
-     
-             const hoverImg = wrapper.querySelector("img.hover");
-             if (hoverImg) hoverImg.remove();
-     
-             const button = wrapper.querySelector(".vote-btn");
-             if (button) {
-               button.disabled = true;
-               button.style.cursor = "default";
-             }
-     
-             const currentTab = wrapper.closest(".tab-content");
-             if (currentTab) {
-               currentTab.querySelectorAll(".vote-btn-wrapper").forEach(w => {
-                 if (w !== wrapper) w.classList.add("hide");
+          const voteMessage = document.getElementById("vote-closed-message");
+          if (voteMessage) voteMessage.style.display = "none";
+
+          const voteButtons = document.querySelectorAll(".vote-btn");
+
+          voteButtons.forEach(btn => {
+               btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const wrapper = this.closest(".vote-btn-wrapper");
+                    const lottieOverlay = wrapper.querySelector(".lottie-feedback-overlay");
+                    const lottiePlayer = wrapper.querySelector("lottie-player");
+                    const candidato = this.parentElement.parentElement.querySelector(".vote-name").textContent;
+
+                    // Mostrar animación Lottie
+                    lottieOverlay.classList.remove("d-none");
+                    lottiePlayer.stop && lottiePlayer.stop();
+                    lottiePlayer.play && lottiePlayer.play();
+
+                    setTimeout(() => {
+                         lottieOverlay.classList.add("d-none");
+
+                         const modal = new bootstrap.Modal(document.getElementById("voteConfirmModal"));
+                         const nombreSpan = document.querySelector(".modal-text-gracias-span strong");
+                         if (nombreSpan) nombreSpan.textContent = candidato;
+
+                         modal._votadoWrapper = wrapper;
+                         modal._votedRegion = wrapper.closest(".tab-content")?.dataset.region;
+                         modal.show();
+                    }, 1000);
                });
-             }
-     
-             // Guardar en localStorage que esta región ya fue votada
-             localStorage.setItem(`votado-${region}`, "true");
-     
-             // Mostrar mensaje solo en la región actual
-             updateVoteMessage(region);
-           }
-         });
-       }
-     
-       // Mostrar/ocultar mensaje cuando cambias de tab
-       const tabLinks = document.querySelectorAll(".tabs a");
-       tabLinks.forEach(link => {
-         link.addEventListener("click", function (e) {
-           e.preventDefault();
-           const region = this.dataset.region;
-     
-           document.querySelectorAll(".tabs a").forEach(a => a.classList.remove("active"));
-           this.classList.add("active");
-     
-           document.querySelectorAll(".tab-content").forEach(tab => {
-             tab.classList.remove("active");
-           });
-           const targetTab = document.querySelector(`.tab-content[data-region="${region}"]`);
-           if (targetTab) targetTab.classList.add("active");
-     
-           updateVoteMessage(region);
-         });
-       });
-     
-       function updateVoteMessage(region) {
-         const voted = localStorage.getItem(`votado-${region}`) === "true";
-         if (voteMessage) voteMessage.style.display = voted ? "flex" : "none";
-       }
-     
-       // Mostrar mensaje según tab activa al cargar
-       const activeTab = document.querySelector(".tab-content.active")?.dataset.region;
-       if (activeTab) updateVoteMessage(activeTab);
+          });
+
+          const btnAceptar = document.querySelector('#voteConfirmModal .btn.btn-aceptar-outline');
+          if (btnAceptar) {
+               btnAceptar.addEventListener('click', function () {
+                    const modal = bootstrap.Modal.getInstance(document.getElementById("voteConfirmModal"));
+                    const wrapper = modal._votadoWrapper;
+                    const region = modal._votedRegion;
+
+                    if (wrapper && region) {
+                         const defaultImg = wrapper.querySelector("img.default");
+                         if (defaultImg) {
+                              defaultImg.src = "../images/votaciones/vote-check.png";
+                              defaultImg.classList.add("vote-check");
+                              defaultImg.addEventListener("animationend", () => {
+                                   defaultImg.classList.remove("vote-check");
+                              }, { once: true });
+                         }
+
+                         const hoverImg = wrapper.querySelector("img.hover");
+                         if (hoverImg) hoverImg.remove();
+
+                         const button = wrapper.querySelector(".vote-btn");
+                         if (button) {
+                              button.disabled = true;
+                              button.style.cursor = "default";
+                         }
+
+                         const currentTab = wrapper.closest(".tab-content");
+                         if (currentTab) {
+                              currentTab.querySelectorAll(".vote-btn-wrapper").forEach(w => {
+                                   if (w !== wrapper) w.classList.add("hide");
+                              });
+                         }
+
+                         // Guardar en localStorage que esta región ya fue votada
+                         localStorage.setItem(`votado-${region}`, "true");
+
+                         // Mostrar mensaje solo en la región actual
+                         updateVoteMessage(region);
+                    }
+               });
+          }
+
+          // Mostrar/ocultar mensaje cuando cambias de tab
+          const tabLinks = document.querySelectorAll(".tabs a");
+          tabLinks.forEach(link => {
+               link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const region = this.dataset.region;
+
+                    document.querySelectorAll(".tabs a").forEach(a => a.classList.remove("active"));
+                    this.classList.add("active");
+
+                    document.querySelectorAll(".tab-content").forEach(tab => {
+                         tab.classList.remove("active");
+                    });
+                    const targetTab = document.querySelector(`.tab-content[data-region="${region}"]`);
+                    if (targetTab) targetTab.classList.add("active");
+
+                    updateVoteMessage(region);
+               });
+          });
+
+          function updateVoteMessage(region) {
+               const voted = localStorage.getItem(`votado-${region}`) === "true";
+               if (voteMessage) voteMessage.style.display = voted ? "flex" : "none";
+          }
+
+          // Mostrar mensaje según tab activa al cargar
+          const activeTab = document.querySelector(".tab-content.active")?.dataset.region;
+          if (activeTab) updateVoteMessage(activeTab);
      });
-     </script>
-     
-     
-
-
-
+</script>
 <script src="../js/jquery-3.7.1.min.js"></script>
 <script src="../js/premio.bundle.min.js"></script>
 
