@@ -722,7 +722,7 @@
 
 .footer-line {
   background: #F8F8F8;
-  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.10); /* Sombra hacia arriba */
-  height: 3px; /* mínimo para que se pinte */
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.10); /* Sombra hacia arriba */
+  height: 2px; /* mínimo para que se pinte */
   margin-bottom: 72px;
 }
