@@ -223,7 +223,7 @@ body{
 }
 
 .video{
-    margin: 80px auto 150px !important;
+    margin: 80px auto 150px;
     overflow: hidden;
  }
 @keyframes bounceInLeft {

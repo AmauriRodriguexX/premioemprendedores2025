@@ -65,6 +65,9 @@
                             <li class="nav-item active">
                                 <a class="nav-link active" aria-current="page" href="/convocatoria/">CONVOCATORIA</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../votaciones/index.html">VOTACIONES</a>
+                            </li>
 
                         </ul>
                     </div>
@@ -99,7 +102,8 @@
                 <div class="container custom-container momento">
                     <div class="momento-content">
                         <h1 class="momento-title">Es tu momento de inspirar al mundo</h1>
-                        <span class="momento-text">Premio Emprendedores reconoce las historias de éxito impulsadas por Yastás. ¿Quieres que todos conozcan tu historia ¡Participa ahora!
+                        <span class="momento-text">Premio Emprendedores reconoce las historias de éxito impulsadas por
+                            Yastás. ¿Quieres que todos conozcan tu historia ¡Participa ahora!
                         </span>
                     </div>
                 </div>
@@ -223,20 +227,40 @@
         <div class="row ">
             <div class="col-12">
                 <div class="container custom-container video">
-                    <video class="background-video" width="100%" height="auto" muted loop autoplay
-                        poster="../images/premio.jpg">
-                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                    <div class="overlay-play">
-                        <div class="center-play">
-                            <a href="#" class="button-play button-play-2 " data-bs-toggle="modal"
-                                data-bs-target="#myVideo" data-label="Historia" data-action="01. Inicio"
-                                data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"><img src="../images/icon-play.png"
-                                    alt="Icono de play en color blanco." width="64"></a>
+                    <div class="video-wrapper">
+
+                        <!-- VIDEO DESKTOP -->
+                        <video class="background-video video-desktop" width="100%" height="auto" muted loop autoplay
+                            poster="../images/premio.jpg">
+                            <source
+                                src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
+                                type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+
+                        <!-- VIDEO MOBILE -->
+                        <video class="background-video video-mobile" muted loop autoplay playsinline controls
+                            poster="../images/premio.jpg">
+                            <source
+                                src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia-4-5.mp4"
+                                type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+
+                        <!-- Botón de Play -->
+                        <div class="overlay-play">
+                            <div class="center-play">
+                                <a href="#" class="button-play button-play-2" data-bs-toggle="modal"
+                                    data-bs-target="#myVideo" data-label="Historia" data-action="01. Inicio"
+                                    data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4">
+                                    <img src="../images/icon-play.png" alt="Icono de play en color blanco." width="64">
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
         <footer class="bd-footer">
@@ -291,19 +315,30 @@
                 <div class="modal-body">
                     <div class="text-modal-content">
                         <p class="aviso-privacidad-text ">Aviso de Privacidad</p>
-                        <p>Red Yastás S.A. de C.V. subsidiaria de GENTERA S.A.B. de C.V, con domicilio en Insurgentes Sur número 1458 piso 5,
-    Colonia Actipan, Alcaldía Benito Juárez, C.P. 03230, México, Ciudad de México, es el responsable del tratamiento y
-    protección de sus datos personales recabados por este medio, categorizados como: i) Identificación y Contacto y ii)
-    Patrimonio y los utilizará para las siguientes finalidades: i) Identificarlo y corroborar su identidad; ii) Integrar
-    y actualizar su expediente; iii) Prestar, administrar, operar y dar seguimiento a los servicios y productos que
-    solicitó o contrató con nosotros; iv) Invitarlo a participar en nuestros eventos, campañas, concursos o sorteos y en
-    caso de resultar ganador, contactarlo para la entrega del premio y v) Fines de uso de imagen en medios publicitarios
-    videos/fotografía y publicaciones en cualquier otro medio de comunicación. Para limitar el uso o divulgación de sus
-    datos personales puede inscribirse en nuestro listado de exclusión denominado "Exclusión de Promoción y Publicidad”,
-    para más información y/o para ejercer sus Derechos ARCO usted podrá consultar el Aviso de Privacidad Integral
-    Prospectos, Comercios Afiliados, Comisionistas y Operadores en el sitio web <a
-        href="https://www.yastas.com/wps/themes/html/YastasOrg/media/Yastas/index.html" class="link-privacidad"
-        target="_blank" rel="noopener noreferrer">www.yastas.com</a> en la sección Aviso de privacidad y derechos ARCO.
+                        <p>Red Yastás S.A. de C.V. subsidiaria de GENTERA S.A.B. de C.V, con domicilio en Insurgentes
+                            Sur número 1458 piso 5,
+                            Colonia Actipan, Alcaldía Benito Juárez, C.P. 03230, México, Ciudad de México, es el
+                            responsable del tratamiento y
+                            protección de sus datos personales recabados por este medio, categorizados como: i)
+                            Identificación y Contacto y ii)
+                            Patrimonio y los utilizará para las siguientes finalidades: i) Identificarlo y corroborar su
+                            identidad; ii) Integrar
+                            y actualizar su expediente; iii) Prestar, administrar, operar y dar seguimiento a los
+                            servicios y productos que
+                            solicitó o contrató con nosotros; iv) Invitarlo a participar en nuestros eventos, campañas,
+                            concursos o sorteos y en
+                            caso de resultar ganador, contactarlo para la entrega del premio y v) Fines de uso de imagen
+                            en medios publicitarios
+                            videos/fotografía y publicaciones en cualquier otro medio de comunicación. Para limitar el
+                            uso o divulgación de sus
+                            datos personales puede inscribirse en nuestro listado de exclusión denominado "Exclusión de
+                            Promoción y Publicidad”,
+                            para más información y/o para ejercer sus Derechos ARCO usted podrá consultar el Aviso de
+                            Privacidad Integral
+                            Prospectos, Comercios Afiliados, Comisionistas y Operadores en el sitio web <a
+                                href="https://www.yastas.com/wps/themes/html/YastasOrg/media/Yastas/index.html"
+                                class="link-privacidad" target="_blank" rel="noopener noreferrer">www.yastas.com</a> en
+                            la sección Aviso de privacidad y derechos ARCO.
                         </p>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="checkDefault">
@@ -311,11 +346,15 @@
                                 He leido y acepto el aviso de privacidad
                             </label><br><br>
                             <div class="d-flex justify-content-center">
-                                <a href="../paso1/"
+                                <a href="../paso1/" id="btnContinuar2"
                                     class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center">
                                     Continuar
-                                    <span class="material-symbols-outlined"
-                                        style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                                    <span class="arrow-icon-wrapper ms-2">
+                                        <img class="default arrow-icon" src="../images/arrow-disable.png"
+                                            alt="Flecha gris" width="24">
+                                        <img class="hover arrow-icon" src="../images/arrow-active.png"
+                                            alt="Flecha blanca" width="24">
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -329,14 +368,28 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img src="../images/icon-overlay-close-morado.png" id="btnCloseModal" alt="Icono de cerrar color morado." width="32" type="button" data-bs-dismiss="modal"
+                    <img src="../images/icon-overlay-close-morado.png" id="btnCloseModal"
+                        alt="Icono de cerrar color morado." width="32" type="button" data-bs-dismiss="modal"
                         aria-label="Close" />
                 </div>
                 <div class="modal-body">
-                    <video id="modal-video" loop autoplay controls muted poster="../images/premio.jpg" height="100%">
-                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
+
+                    <!-- VIDEO DESKTOP -->
+                    <video id="modal-video-desktop" class="video-desktop" loop autoplay controls muted playsinline
+                        poster="../images/premio.jpg">
+                        <source
+                            src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
+                            type="video/mp4">
                     </video>
+
+                    <!-- VIDEO MOBILE -->
+                    <video id="modal-video-mobile" class="video-mobile" loop autoplay controls muted playsinline
+                        poster="../images/premio.jpg">
+                        <source
+                            src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia-4-5.mp4"
+                            type="video/mp4">
+                    </video>
+
                 </div>
             </div>
         </div>
@@ -359,6 +412,34 @@
         });
     });
 
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('checkDefault');
+
+        const botones = ['btnContinuar', 'btnContinuar2'];
+
+        function toggleButtonState(btnId, checked) {
+            const btn = document.getElementById(btnId);
+            if (!btn) return;
+
+            const imgDefault = btn.querySelector('img.default');
+            const imgHover = btn.querySelector('img.hover');
+
+            if (imgDefault && imgHover) {
+                btn.classList.toggle('btn-disabled', !checked);
+                imgDefault.style.opacity = checked ? '0' : '1';
+                imgHover.style.opacity = checked ? '1' : '0';
+            }
+        }
+
+        checkbox.addEventListener('change', function () {
+            botones.forEach(id => toggleButtonState(id, this.checked));
+        });
+
+        // Inicializar estado en carga
+        botones.forEach(id => toggleButtonState(id, checkbox.checked));
+    });
 </script>
 <script src="../js/jquery-3.7.1.min.js"></script>
 <script src="../js/premio.bundle.min.js"></script>

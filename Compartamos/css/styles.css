@@ -1171,19 +1171,20 @@ label {
     width: 24px;
     height: 24px;
     display: inline-block;
-}
-
-.arrow-icon-wrapper img {
+  }
+  
+  .arrow-icon-wrapper img {
     position: absolute;
     top: 0;
     left: 0;
     transition: opacity 0.3s ease;
-}
-
-.arrow-icon-wrapper img.default {
+  }
+  
+  .arrow-icon-wrapper img.default {
     opacity: 1;
-}
-
-.arrow-icon-wrapper img.hover {
+  }
+  
+  .arrow-icon-wrapper img.hover {
     opacity: 0;
-}
+  }
+  

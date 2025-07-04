@@ -68,6 +68,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="convocatoria/">CONVOCATORIA</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="votaciones/">VOTACIONES</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -93,24 +96,39 @@
         <div class="row ">
             <div class="col-12">
                 <div class="container custom-container video">
-                    <video class="background-video" width="100%" height="auto" muted loop autoplay
+                    <div class="video-wrapper">
+                  
+                      <!-- VIDEO DESKTOP (16:9) -->
+                      <video class="background-video video-desktop" width="100%" height="auto" muted loop autoplay
                         poster="images/premio.jpg">
-                        <source
-                            src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
-                            type="video/mp4">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
+                          type="video/mp4">
                         Your browser does not support HTML5 video.
-                    </video>
-                    <div class="overlay-play">
+                      </video>
+                  
+                      <!-- VIDEO MOBILE (4:5) -->
+                      <video class="background-video video-mobile" muted loop autoplay playsinline controls
+                        poster="images/premio.jpg">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia-4-5.mp4"
+                          type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  
+                      <!-- Overlay con botón de play y texto -->
+                      <div class="overlay-play">
                         <div class="center-play">
-                            <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
-                                data-label="Historia" data-action="01. Inicio"
-                                data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"><img
-                                    src="images/icon-play.png" height="64" width="64"
-                                    alt="Icono de play en color blanco."></a>
-                            <div class="text-play  d-none d-md-inline">Conoce la experiencia</div>
+                          <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
+                            data-label="Historia" data-action="01. Inicio"
+                            data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4">
+                            <img src="images/icon-play.png" height="64" width="64" alt="Icono de play en color blanco.">
+                          </a>
+                          <div class="text-play d-none d-md-inline">Conoce la experiencia</div>
                         </div>
+                      </div>
+                  
                     </div>
-                </div>
+                  </div>
+                  
             </div>
         </div>
         <div class="row row-mobile">
@@ -283,23 +301,35 @@
 
     <div class="modal fade" id="myVideo" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="images/icon-overlay-close-morado.png" id="btnCloseModal"
-                        alt="Icono de cerrar color morado." type="button" data-bs-dismiss="modal" aria-label="Close"
-                        width="32" />
-                </div>
-                <div class="modal-body">
-                    <video id="modal-video" autoplay muted controls poster="images/premio.jpg" height="100%">
-                        <source
-                            src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
-                            type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="images/icon-overlay-close-morado.png" id="btnCloseModal"
+                alt="Icono de cerrar color morado." type="button" data-bs-dismiss="modal" aria-label="Close" width="32" />
             </div>
+            <div class="modal-body">
+      
+              <!-- VIDEO DESKTOP (16:9) -->
+              <video id="modal-video-desktop" class="video-desktop" autoplay muted controls playsinline
+                poster="images/premio.jpg">
+                <source
+                  src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia.mp4"
+                  type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+      
+              <!-- VIDEO MOBILE (4:5) -->
+              <video id="modal-video-mobile" class="video-mobile" autoplay muted controls playsinline
+                poster="images/premio.jpg">
+                <source
+                  src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/Yastas/video-historia-4-5.mp4"
+                  type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+      
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     <div>
         <a href="images/gallery/galeria-1.jpg" class="glightbox"
             data-alt="Escenario del Premio Emprendedores 2024 con asistentes atentos." data-gallery="gallery1"
@@ -366,11 +396,13 @@
                             </label><br><br>
 
                             <div class="d-flex justify-content-center">
-                                <a href="paso1/"
-                                    class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center">
+                                <a href="paso1/" id="btnContinuar"
+                                    class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center arrow-btn">
                                     Continuar
-                                    <span class="material-symbols-outlined"
-                                        style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                                    <span class="arrow-icon-wrapper ms-2">
+                                        <img class="default arrow-icon" src="images/arrow-disable.png" alt="Flecha gris" width="24">
+                                        <img class="hover arrow-icon" src="images/arrow-active.png" alt="Flecha blanca" width="24">
+                                    </span>
                                 </a>
                             </div>
 
@@ -391,5 +423,28 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/script.js"></script>
 <script src="js/Utms.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('checkDefault');
+        const btn = document.getElementById('btnContinuar');
+        const imgDefault = btn.querySelector('img.default');
+        const imgHover = btn.querySelector('img.hover');
+    
+        function toggleArrowIcons(isChecked) {
+            btn.classList.toggle('btn-disabled', !isChecked);
+            imgDefault.style.opacity = isChecked ? '0' : '1';
+            imgHover.style.opacity = isChecked ? '1' : '0';
+        }
+    
+        checkbox.addEventListener('change', function () {
+            toggleArrowIcons(this.checked);
+        });
+    
+        // Inicializar si ya está marcado
+        toggleArrowIcons(checkbox.checked);
+    });
+    </script>
+    
 
 </html>
