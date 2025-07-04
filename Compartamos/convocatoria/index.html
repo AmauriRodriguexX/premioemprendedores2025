@@ -370,12 +370,15 @@
                                 He leido y acepto el aviso de privacidad
                             </label><br><br>
                             <div class="d-flex justify-content-center">
-                                <a href="../paso1/"
+                                <a href="../paso1/" id="btnContinuar2"
                                     class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center">
                                     Continuar
-                                    <span class="material-symbols-outlined"
-                                        style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                                    <span class="arrow-icon-wrapper ms-2">
+                                        <img class="default arrow-icon" src="../images/arrow-disable.png" alt="Flecha gris" width="24">
+                                        <img class="hover arrow-icon" src="../images/arrow-active.png" alt="Flecha blanca" width="24">
+                                    </span>
                                 </a>
+                            
                             </div>
                         </div>
                     </div>
@@ -432,6 +435,38 @@
     });
 
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('checkDefault');
+    
+        const botones = ['btnContinuar', 'btnContinuar2'];
+    
+        function toggleButtonState(btnId, checked) {
+            const btn = document.getElementById(btnId);
+            if (!btn) return;
+    
+            const imgDefault = btn.querySelector('img.default');
+            const imgHover = btn.querySelector('img.hover');
+    
+            if (imgDefault && imgHover) {
+                btn.classList.toggle('btn-disabled', !checked);
+                imgDefault.style.opacity = checked ? '0' : '1';
+                imgHover.style.opacity = checked ? '1' : '0';
+            }
+        }
+    
+        checkbox.addEventListener('change', function () {
+            botones.forEach(id => toggleButtonState(id, this.checked));
+        });
+    
+        // Inicializar estado en carga
+        botones.forEach(id => toggleButtonState(id, checkbox.checked));
+    });
+    </script>
+    
+    
+    
 <script src="../js/jquery-3.7.1.min.js"></script>
 <script src="../js/premio.bundle.min.js"></script>
 

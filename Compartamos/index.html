@@ -473,11 +473,13 @@
                             </label><br><br>
 
                             <div class="d-flex justify-content-center">
-                                <a href="paso1/"
-                                    class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center">
+                                <a href="paso1/" id="btnContinuar"
+                                    class="btn btn-disabled btn-continue bt-politica d-flex justify-content-center align-items-center arrow-btn">
                                     Continuar
-                                    <span class="material-symbols-outlined"
-                                        style="font-size: 24px; margin-left: 6px;">arrow_forward</span>
+                                    <span class="arrow-icon-wrapper ms-2">
+                                        <img class="default arrow-icon" src="images/arrow-disable.png" alt="Flecha gris" width="24">
+                                        <img class="hover arrow-icon" src="images/arrow-active.png" alt="Flecha blanca" width="24">
+                                    </span>
                                 </a>
                             </div>
 
@@ -498,5 +500,32 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/script.js"></script>
 <script src="js/Utms.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('checkDefault');
+        const btn = document.getElementById('btnContinuar');
+        const imgDefault = btn.querySelector('img.default');
+        const imgHover = btn.querySelector('img.hover');
+    
+        function toggleArrowIcons(isChecked) {
+            btn.classList.toggle('btn-disabled', !isChecked);
+            imgDefault.style.opacity = isChecked ? '0' : '1';
+            imgHover.style.opacity = isChecked ? '1' : '0';
+        }
+    
+        checkbox.addEventListener('change', function () {
+            toggleArrowIcons(this.checked);
+        });
+    
+        // Inicializar si ya está marcado
+        toggleArrowIcons(checkbox.checked);
+    });
+    </script>
+    
+
+    
+    
+
+    
 
 </html>
