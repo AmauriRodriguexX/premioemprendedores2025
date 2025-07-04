@@ -170,7 +170,6 @@
 }
 
 .vote-img-wrapper {
-  height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -253,10 +252,6 @@
     max-width: 100%;
   }
 
-  .vote-img-wrapper {
-    height: 300px;
-    /* más baja en mobile */
-  }
 
   .vote-name {
     font-size: 28px;
