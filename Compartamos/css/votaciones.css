@@ -15,7 +15,8 @@
 @media (max-width: 768px) {
   .back-convo-votaciones {
     background: url(../images/votaciones/master-background-banco-mobile.jpg);
-    min-height: 1600px; /* ← ajusta según el contenido que tengas */
+    min-height: 1600px;
+    /* ← ajusta según el contenido que tengas */
   }
 }
 
@@ -57,6 +58,7 @@
   overflow-x: hidden;
   /* evita fugas laterales */
 }
+
 @media (max-width: 768px) {
   .tabs-wrapper {
     margin-top: 32px;
@@ -148,7 +150,8 @@
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
-  justify-content: space-between; /* <- clave aquí */
+  justify-content: space-between;
+  /* <- clave aquí */
   margin-top: 40px;
 }
 
@@ -253,11 +256,13 @@
   }
 
   .vote-img-wrapper {
-    height: 300px; /* más baja en mobile */
+    height: 300px;
+    /* más baja en mobile */
   }
 
   .vote-name {
-    font-size: 28px; /* más legible en móviles */
+    font-size: 28px;
+    /* más legible en móviles */
   }
 
   .vote-info {
@@ -282,15 +287,15 @@
 
 
 .img-next {
-    width: 32px !important;
-    margin: 16px;
+  width: 32px !important;
+  margin: 16px;
 }
 
 .vote-btn-next {
   width: 80px !important;
 }
 
-.modal-content {
+.modal-content-2 {
   border-radius: 12px;
   max-width: 400px;
   margin: auto;
@@ -318,7 +323,8 @@
   position: fixed;
   top: 16px;
   right: 16px;
-  z-index: 1065; /* más alto que el modal */
+  z-index: 1065;
+  /* más alto que el modal */
   cursor: pointer;
   background-color: transparent;
 }
@@ -334,9 +340,11 @@
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
-  line-height: 38px; /* 135.714% */
+  line-height: 38px;
+  /* 135.714% */
   margin-bottom: 24px;
 }
+
 .modal-text-gracias-span {
   color: #252A2D;
   text-align: center;
@@ -388,10 +396,12 @@
     transform: scale(0.8);
     opacity: 0;
   }
+
   60% {
     transform: scale(1.2);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
   }
@@ -440,7 +450,7 @@
   }
 
   .vote-alert-message img {
-   margin-top: 6px; 
+    margin-top: 6px;
   }
 }
 
@@ -459,9 +469,250 @@
 }
 
 .vote-alert-message-container.show {
-  max-height: 120px; /* Ajusta según contenido real */
+  max-height: 120px;
+  /* Ajusta según contenido real */
   opacity: 1;
   margin-top: 16px;
   margin-bottom: 24px;
 }
 
+
+
+.btn-back {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #212121;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 170px;
+}
+
+/* Ajuste para pantallas pequeñas (mobile) */
+@media (max-width: 767px) {
+  .btn-back {
+    margin-left: 16px;
+  }
+}
+
+.icon-back {
+  margin-right: 6px;
+}
+
+.nombre-participante {
+  color: #CE0058;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.giro-participante {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.descripcion-participante {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.img-participante {
+  width: 375px;
+  max-width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: inline-block;
+}
+
+/* En mobile: altura automática para evitar recortes */
+@media (max-width: 767.98px) {
+  .img-participante {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .h-50vh-mobile {
+    height: 55vh !important;
+    padding: 0 13px !important;
+  }
+}
+
+
+.video-container {
+  margin: 80px auto 50px !important;
+  overflow: hidden;
+}
+
+/* Clase original */
+.no-padding {
+  padding: 0 !important;
+  display: flex;
+  justify-content: end;
+}
+
+/* Anulación en mobile */
+@media (max-width: 767.98px) {
+  .no-padding {
+    padding: 16px !important;
+    /* o el valor que necesites */
+    display: block !important;
+    justify-content: unset !important;
+  }
+}
+
+.participante-name {
+  color: #CE0058;
+  font-family: 'Bree', serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+/* boton flotante */
+.vote-btn-floating {
+  position: fixed;
+  bottom: 64px;
+  right: 151px;
+  z-index: 9999;
+}
+
+/* Responsive para mobile */
+@media (max-width: 767.98px) {
+  .vote-btn-floating {
+    bottom: 29px;
+    right: 29px;
+  }
+}
+
+.vote-btn-floating .vote-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.vote-btn-floating .vote-btn img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease;
+}
+
+.vote-btn-floating .vote-btn img.hover {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vote-btn-floating .vote-btn:hover img.hover {
+  opacity: 1;
+}
+
+.vote-btn-floating .vote-btn:hover img.default {
+  opacity: 0;
+}
+
+.vote-btn-floating .vote-btn-wrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.vote-btn-floating .lottie-feedback-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-voto-exito {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  /* puedes usar blanco o #F8F8F8 si prefieres */
+  color: #6C757D;
+  /* Gris como en el ejemplo */
+  font-size: 15px;
+  padding: 8px 0;
+  margin-bottom: 32px;
+}
+
+.icono-alerta {
+  width: 40px;
+  height: 40px;
+}
+
+.texto-alerta {
+  color: #5E6A71;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 171.429% */
+}
+
+.alerta-voto-exito-custom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  color: #6C757D;
+  font-size: 15px;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Icono */
+.icono-alerta {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+/* Texto */
+.texto-alerta {
+  color: #5E6A71;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Posición en mobile: arriba del nombre */
+@media (max-width: 767px) {
+  .alerta-voto-exito-custom {
+    order: -1;
+    margin-bottom: 12px;
+  }
+}
+
+/* Posición en desktop: abajo del texto */
+@media (min-width: 768px) {
+  .alerta-voto-exito-custom {
+    order: 3;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+}
+.m-120 {
+  margin-bottom: 133px;
+}

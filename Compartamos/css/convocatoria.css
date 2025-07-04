@@ -226,6 +226,13 @@ body{
     margin: 80px auto 150px !important;
     overflow: hidden;
  }
+
+ 
+@media (max-width: 768px) {
+    .video {
+        margin: 30px auto 0px !important;
+    }
+}
 @keyframes bounceInLeft {
     0% {
         opacity: 0;
