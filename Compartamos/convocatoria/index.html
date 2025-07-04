@@ -227,26 +227,41 @@
                 </div>
             </div>
         </div>
+
         <div class="row ">
             <div class="col-12">
                 <div class="container custom-container video">
-                    <video class="background-video" width="100%" height="auto" muted loop autoplay
+                    <div class="video-wrapper">
+                  
+                      <!-- VIDEO DESKTOP (16:9) -->
+                      <video class="background-video video-desktop" width="100%" height="auto" muted loop autoplay
                         poster="../images/premio.jpg">
-                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
-                            type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                    <div class="overlay-play">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4" type="video/mp4">
+                      </video>
+                  
+                      <!-- VIDEO MOBILE (4:5) -->
+                      <video class="background-video video-mobile" muted loop autoplay playsinline controls
+                        poster="../images/premio.jpg">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
+                          type="video/mp4">
+                      </video>
+                  
+                      <!-- Botón de Play -->
+                      <div class="overlay-play">
                         <div class="center-play">
-                            <a href="#" class="button-play button-play-2 " data-bs-toggle="modal"
-                                data-bs-target="#myVideo" data-label="Historia" data-action="01. Inicio"
-                                data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"><img
-                                    src="../images/icon-play.png" alt="Icono de play en color blanco." width="64"></a>
+                          <a href="#" class="button-play button-play-2" data-bs-toggle="modal" data-bs-target="#myVideo"
+                            data-label="Historia" data-action="01. Inicio"
+                            data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4">
+                            <img src="../images/icon-play.png" alt="Icono de play en color blanco." width="64">
+                          </a>
                         </div>
+                      </div>
+                  
                     </div>
-                </div>
+                  </div>                  
             </div>
         </div>
+        
         <footer class="bd-footer">
             <div class="container custom-container">
                 <div class="row">
@@ -377,11 +392,23 @@
                         aria-label="Close" />
                 </div>
                 <div class="modal-body">
-                    <video id="modal-video" loop autoplay controls muted poster="../images/premio.jpg" height="100%">
+    
+                    <!-- VIDEO DESKTOP -->
+                    <video id="modal-video-desktop" class="video-desktop" loop autoplay controls muted playsinline
+                        poster="../images/premio.jpg">
                         <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
                             type="video/mp4">
-                        Your browser does not support HTML5 video.
+                        Tu navegador no soporta HTML5 video.
                     </video>
+    
+                    <!-- VIDEO MOBILE -->
+                    <video id="modal-video-mobile" class="video-mobile" loop autoplay controls muted playsinline
+                        poster="../images/premio.jpg">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
+                            type="video/mp4">
+                        Tu navegador no soporta HTML5 video.
+                    </video>
+    
                 </div>
             </div>
         </div>

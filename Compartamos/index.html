@@ -94,22 +94,39 @@
         <div class="row ">
             <div class="col-12">
                 <div class="container custom-container video">
-                    <video class="background-video" width="100%" height="auto" muted loop autoplay
+                    <div class="video-wrapper">
+                  
+                      <!-- VIDEO DESKTOP -->
+                      <video class="background-video video-desktop" width="100%" height="auto" muted loop autoplay
                         poster="images/premio.jpg">
                         <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
-                            type="video/mp4">
+                          type="video/mp4">
                         Your browser does not support HTML5 video.
-                    </video>
-                    <div class="overlay-play">
+                      </video>
+                  
+                      <!-- VIDEO MOBILE -->
+                      <video class="background-video video-mobile" muted loop autoplay playsinline controls
+                        poster="images/premio.jpg">
+                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
+                          type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  
+                      <!-- Botón + texto -->
+                      <div class="overlay-play">
                         <div class="center-play">
-                            <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
-                                data-label="Historia" data-action="01. Inicio"
-                                data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"><img
-                                    src="images/icon-play.png" width="64" alt="Icono de play en color blanco."></a>
-                            <div class="text-play  d-none d-md-inline">Conoce la experiencia</div>
+                          <a href="#" class="button-play" data-bs-toggle="modal" data-bs-target="#myVideo"
+                            data-label="Historia" data-action="01. Inicio"
+                            data-url="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4">
+                            <img src="images/icon-play.png" width="64" alt="Icono de play en color blanco.">
+                          </a>
+                          <div class="text-play d-none d-md-inline">Conoce la experiencia</div>
                         </div>
+                      </div>
+                  
                     </div>
-                </div>
+                  </div>
+                  
             </div>
         </div>
         <div class="row row-mobile">
@@ -360,21 +377,33 @@
 
     <div class="modal fade" id="myVideo" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="images/icon-overlay-close-magenta.png" id="btnCloseModal" type="button"
-                        data-bs-dismiss="modal" aria-label="Close" width="32" />
-                </div>
-                <div class="modal-body">
-                    <video id="modal-video" autoplay muted controls poster="images/premio.jpg" height="100%">
-                        <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
-                            type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="images/icon-overlay-close-magenta.png" id="btnCloseModal" type="button"
+                data-bs-dismiss="modal" aria-label="Close" width="32" />
             </div>
+            <div class="modal-body">
+      
+              <!-- VIDEO DESKTOP -->
+              <video id="modal-video-desktop" class="video-desktop" autoplay muted controls playsinline
+                poster="images/premio.jpg">
+                <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia.mp4"
+                  type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+      
+              <!-- VIDEO MOBILE -->
+              <video id="modal-video-mobile" class="video-mobile" autoplay muted controls playsinline
+                poster="images/premio.jpg">
+                <source src="https://www.multimedia.gentera.com.mx/compartamos/PEC_2025/CB/video-historia-4-5.mp4"
+                  type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+      
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     <div>
         <a href="images/gallery/galeria-1.jpg" class="glightbox"
             data-alt="Escenario del Premio Emprendedores 2024 con asistentes atentos." data-gallery="gallery1"
