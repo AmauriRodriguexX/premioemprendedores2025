@@ -719,3 +719,9 @@
 .m-120 {
   margin-bottom: 133px;
 }
+
+.main-shadow-bottom {
+  background: #FFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.10);
+  margin-bottom: 72px;
+}
