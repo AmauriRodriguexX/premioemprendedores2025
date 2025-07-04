@@ -480,8 +480,6 @@
   margin-bottom: 24px;
 }
 
-
-
 .btn-back {
   background: none;
   border: none;
@@ -543,7 +541,7 @@
 
 @media (max-width: 767.98px) {
   .h-50vh-mobile {
-    height: 55vh !important;
+    height: 58vh !important;
     padding: 0 13px !important;
   }
 }
