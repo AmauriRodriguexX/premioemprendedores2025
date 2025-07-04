@@ -498,6 +498,7 @@
 @media (max-width: 767px) {
   .btn-back {
     margin-left: 16px;
+    margin-top: 16px;
   }
 }
 
