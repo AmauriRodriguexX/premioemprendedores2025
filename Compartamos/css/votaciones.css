@@ -20,8 +20,6 @@
   }
 }
 
-
-
 /* En mobile: que crezca según el contenido */
 @media (max-width: 768px) {
   .prev-header-auto {
@@ -284,8 +282,6 @@
   transform: rotate(-45deg);
 }
 
-
-
 .img-next {
   width: 32px !important;
   margin: 16px;
@@ -293,6 +289,14 @@
 
 .vote-btn-next {
   width: 80px !important;
+  margin-bottom: 16px;
+}
+
+/* Anula en mobile */
+@media (max-width: 767.98px) {
+  .vote-btn-next {
+    margin-bottom: 0px !important;
+  }
 }
 
 .modal-content-2 {
@@ -545,8 +549,13 @@
 
 
 .video-container {
-  margin: 80px auto 50px !important;
+  margin: 80px auto 50px;
   overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .video-container {
+    margin: 30px auto 50px;
+  }
 }
 
 /* Clase original */
