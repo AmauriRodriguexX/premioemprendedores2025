@@ -464,12 +464,8 @@
   .vote-alert-message {
     margin-left: 0;
     margin-right: auto;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-  }
-
-  .vote-alert-message img {
-    margin-top: 6px;
   }
 }
 
