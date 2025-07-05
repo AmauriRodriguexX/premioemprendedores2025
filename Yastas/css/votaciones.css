@@ -1,24 +1,27 @@
-html, body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 768px) {
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+  }
+
+  body > .container-fluid {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  }
+
+  body > .container-fluid > footer {
+      margin-top: auto;
+  }
 }
 
-body > .container-fluid {
-  flex: 1 0 auto; /* permite crecer más allá del viewport */
-  display: flex;
-  flex-direction: column;
-}
-
-body > .container-fluid > footer {
-  margin-top: auto;
-}
 
 
 .back-convo-votaciones {
-  background: url(../images/votaciones/master-background-yastas-mobile.jpg);
+  background: url(../images/votaciones/master-background-yastas.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -569,7 +572,7 @@ body > .container-fluid > footer {
 }
 @media (max-width: 767.98px) {
   .video-container {
-    margin: 30px auto 50px;
+    margin: 30px auto 0px;
   }
 }
 
